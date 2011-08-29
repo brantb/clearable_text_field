@@ -80,7 +80,8 @@
       input.width(input.data('original-width'));
     }
 
-    if (set_focus && set_focus!=undefined) input.focus();
+    if (set_focus && set_focus!=undefined) 
+      setTimeout(function() { input.focus().val(input.val()); }, 5);
   }
   
 })(jQuery);
